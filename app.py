@@ -72,6 +72,8 @@ input_data = {
 
 # Transform the input data using the transformation pipeline
 input_df = pd.DataFrame(input_data)
+print(transfomration_pipeline)
+print(input_df)
 transformed_input_df = transfomration_pipeline.transform(input_df)
 
 # Predict the risk using the ANN model
