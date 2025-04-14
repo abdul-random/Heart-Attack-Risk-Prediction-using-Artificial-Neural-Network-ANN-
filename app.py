@@ -9,6 +9,7 @@ import streamlit as st
 with open('transfomration_pipeline.pkl', 'rb') as file:
      transfomration_pipeline = pickle.load(file)
 
+print(transfomration_pipeline)
 # transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
 
 model = load_model('model.h5')
