@@ -1,7 +1,7 @@
 # Import Libraries
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
 from tensorflow.keras.models import load_model
 import streamlit as st
 
