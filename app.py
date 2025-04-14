@@ -6,7 +6,11 @@ from tensorflow.keras.models import load_model
 import streamlit as st
 
 # Load Models
-transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
+with open('transfomration_pipeline.pkl', 'rb') as file:
+     transfomration_pipeline = pickle.load(file)
+
+# transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
+
 model = load_model('model.h5')
 
 # Create the app
