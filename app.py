@@ -71,14 +71,12 @@ input_data = {
     'BP Low Value': [BP_Low_Value]
 }
 
-# Transform the input data using the transformation pipeline
-input_df = pd.DataFrame(input_data)
-print(transfomration_pipeline)
-print(input_df)
-transformed_input_df = transfomration_pipeline.transform(input_df)
+# # Transform the input data using the transformation pipeline
+# input_df = pd.DataFrame(input_data)
+# transformed_input_df = transfomration_pipeline.transform(input_df)
 
-# Predict the risk using the ANN model
-risk_prediction = model.predict(transformed_input_df)
+# # Predict the risk using the ANN model
+# risk_prediction = model.predict(transformed_input_df)
 
-# Display the prediction result
-st.write(f"The predicted risk of heart attack is: {risk_prediction[0][0] * 100:.2f} %")
+# # Display the prediction result
+# st.write(f"The predicted risk of heart attack is: {risk_prediction[0][0] * 100:.2f} %")
