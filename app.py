@@ -1,17 +1,16 @@
 # Import Libraries
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 from tensorflow.keras.models import load_model
 import streamlit as st
 
 # Load Models
-with open('transfomration_pipeline.pkl', 'rb') as file:
-     transfomration_pipeline = pickle.load(file)
+# with open('transfomration_pipeline.pkl', 'rb') as file:
+#      transfomration_pipeline = pickle.load(file)
 
-print(transfomration_pipeline)
-# transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
-
+# print(transfomration_pipeline)
+transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
 model = load_model('model.h5')
 
 # Create the app
