@@ -6,10 +6,6 @@ from tensorflow.keras.models import load_model
 import streamlit as st
 
 # Load Models
-# with open('transfomration_pipeline.pkl', 'rb') as file:
-#      transfomration_pipeline = pickle.load(file)
-
-# print(transfomration_pipeline)
 transfomration_pipeline = joblib.load("transfomration_pipeline.pkl")
 model = load_model('model.h5')
 
@@ -71,13 +67,11 @@ input_data = {
 }
 
 # Transform the input data using the transformation pipeline
-print(transfomration_pipeline)
 input_df = pd.DataFrame(input_data)
 transformed_input_df = transfomration_pipeline.transform(input_df)
-print(transformed_input_df)
 
-# # Predict the risk using the ANN model
-# risk_prediction = model.predict(transformed_input_df)
+# Predict the risk using the ANN model
+risk_prediction = model.predict(transformed_input_df)
 
-# # Display the prediction result
-# st.write(f"The predicted risk of heart attack is: {risk_prediction[0][0] * 100:.2f} %")
+# Display the prediction result
+st.write(f"The predicted risk of heart attack is: {risk_prediction[0][0] * 100:.2f} %")
