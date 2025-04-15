@@ -72,6 +72,7 @@ input_data = {
 }
 
 # Transform the input data using the transformation pipeline
+print(transfomration_pipeline)
 input_df = pd.DataFrame(input_data)
 transformed_input_df = transfomration_pipeline.transform(input_df)
 print(transformed_input_df)
